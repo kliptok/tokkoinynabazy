@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090914">
+  <meta name="description" content="ТокКлип — выполняй задания под клипами и участвуй в розыгрышах ТокКоинов.">
+  <title>ТокКлип — твой комментарий решает!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ТокКлип — главная">
+      <span class="brand-mark">TK</span><span>ТОК<span class="brand-accent">КЛИП</span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a class="nav-link active" href="#activity">Активность</a>
+      <a class="nav-link" href="#how">Как участвовать</a>
+      <a class="nav-link" href="#archive">Архив</a>
+      <a class="nav-link" href="#rules">Правила</a>
+    </nav>
+    <a class="header-button" href="#participate">Участвовать <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="activity">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> АКТИВНОСТЬ СООБЩЕСТВА</div>
+        <h1>ТВОЙ КОММЕНТАРИЙ<br><span class="gradient-text">РЕШАЕТ!</span></h1>
+        <p class="hero-description">Получай задания, оставляй комментарии под клипами ВКонтакте и выигрывай ТокКоины.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#participate">Получить задание <span>→</span></a>
+          <a class="button button-ghost" href="#how">Как это работает</a>
+        </div>
+        <div class="hero-note"><span class="tiny-star">✦</span> Обычные задания и редкие секретные награды</div>
+      </div>
+      <div class="hero-art" aria-label="Неоновая иллюстрация активности">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-core"><span class="core-symbol">✦</span><span class="core-label">TOK<br>CLIP</span></div>
+        <div class="float-card card-comment"><span class="float-icon">✎</span><span><b>Твой комментарий</b><small>может принести награду</small></span></div>
+        <div class="float-card card-coin"><span class="coin-icon">₮</span><span><b>+100</b><small>секретная награда</small></span></div>
+        <div class="spark spark-one">✦</div><div class="spark spark-two">✧</div><div class="spark spark-three">✦</div>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Награды">
+      <article class="stat-card"><div class="stat-icon purple">₮</div><div><strong>15 <small>ТокКоинов</small></strong><p>За победу в розыгрыше</p></div></article>
+      <article class="stat-card"><div class="stat-icon cyan">✦</div><div><strong>100 <small>ТокКоинов</small></strong><p>За секретное задание</p></div></article>
+      <article class="stat-card"><div class="stat-icon pink">15</div><div><strong>победителей</strong><p>После каждого клипа</p></div></article>
+    </section>
+
+    <section class="content-section participate-section" id="participate">
+      <div class="section-heading"><div><div class="eyebrow">ТЕКУЩАЯ АКТИВНОСТЬ</div><h2>Время выполнить задание</h2></div><span class="status-pill"><span class="pulse"></span> Ожидает запуска</span></div>
+      <div class="activity-layout">
+        <article class="panel clip-panel">
+          <div class="panel-top"><span class="panel-kicker">ТЕКУЩИЙ КЛИП</span><span class="tag">АКТИВНОСТЬ</span></div>
+          <div class="clip-placeholder"><div class="play-button">▶</div><span>Здесь появится текущий клип ВКонтакте</span></div>
+          <p class="muted small">Организатор добавит ссылку на клип перед началом активности.</p>
+          <a class="text-link disabled-link" href="#participate" aria-disabled="true">Открыть клип <span>↗</span></a>
+        </article>
+        <article class="panel form-panel">
+          <div class="panel-kicker">ПОЛУЧЕНИЕ ЗАДАНИЯ</div>
+          <h3>Начни участие</h3>
+          <p class="muted">Укажи VK ID и получи персональное задание для текущего клипа.</p>
+          <form id="task-form">
+            <label for="vk-id">Твой VK ID</label>
+            <div class="input-wrap"><span>@</span><input id="vk-id" name="vkId" inputmode="numeric" placeholder="Например, 123456789" required pattern="[0-9]{1,20}" autocomplete="off"></div>
+            <button class="button button-primary full-width" type="submit" id="get-task">Получить задание <span>→</span></button>
+          </form>
+          <div class="notice"><span>ⓘ</span> Одно задание на один VK ID для каждого клипа. После выдачи заменить его нельзя.</div>
+          <div class="task-result" id="task-result" hidden aria-live="polite"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="how">
+      <div class="section-heading"><div><div class="eyebrow">ВСЁ ПРОСТО</div><h2>Как участвовать</h2></div></div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01</span><div class="step-icon">◉</div><h3>Получи задание</h3><p>Укажи VK ID и запроси случайное задание для текущего клипа.</p></article>
+        <article class="step-card"><span class="step-number">02</span><div class="step-icon">✎</div><h3>Оставь комментарий</h3><p>Перейди во ВКонтакте и выполни задание в комментариях к клипу.</p></article>
+        <article class="step-card"><span class="step-number">03</span><div class="step-icon">↗</div><h3>Отправь ссылку</h3><p>Скопируй ссылку именно на свой комментарий и отправь на проверку.</p></article>
+        <article class="step-card"><span class="step-number">04</span><div class="step-icon">✦</div><h3>Получи награду</h3><p>Дождись проверки: обычное задание даст шанс на розыгрыш, секретное — отдельную награду.</p></article>
+      </div>
+    </section>
+
+    <section class="content-section reward-section" id="rules">
+      <div class="reward-copy"><div class="eyebrow">ДВА ТИПА ЗАДАНИЙ</div><h2>Обычные и<br><span class="gradient-text">секретные</span></h2><p class="muted">Секретное задание выпадает редко и заменяет обычное для этого клипа. Оно не участвует в общем розыгрыше.</p></div>
+      <div class="reward-cards">
+        <article class="reward-card regular"><div class="reward-card-top"><span>ОБЫЧНОЕ ЗАДАНИЕ</span><span class="reward-symbol">₮</span></div><strong>15 <small>ТокКоинов</small></strong><p>После проверки попадаешь в список участников розыгрыша.</p><div class="reward-line"></div><span class="muted small">15 победителей на каждый клип</span></article>
+        <article class="reward-card secret"><div class="reward-card-top"><span>✦ СЕКРЕТНОЕ ЗАДАНИЕ</span><span class="reward-symbol">✧</span></div><strong>100 <small>ТокКоинов</small></strong><p>Выполни особое задание и получи награду после проверки.</p><div class="reward-line"></div><span class="muted small">Редкий шанс при получении задания</span></article>
+      </div>
+    </section>
+
+    <section class="content-section archive-section" id="archive">
+      <div class="section-heading"><div><div class="eyebrow">ИСТОРИЯ ПРОЕКТА</div><h2>Архив активностей</h2></div></div>
+      <div class="empty-state"><div class="empty-icon">⌁</div><h3>Здесь появятся итоги активностей</h3><p>Завершённые клипы, принятые заявки и списки победителей будут сохраняться в архиве.</p></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#"><span class="brand-mark">TK</span><span>ТОК<span class="brand-accent">КЛИП</span></span></a><span>Твой комментарий решает! <span class="footer-dot">✦</span></span><span class="muted small">© ТокКлип</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
