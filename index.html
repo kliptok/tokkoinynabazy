@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b20">
+  <meta name="description" content="Активность фан-проекта Аватарский Kliptok. Получай задания, выполняй их и зарабатывай ТокКоины!">
+  <title>ТокКлип — твой комментарий решает!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="ТокКлип — на главную"><span class="brand-mark">ТК</span><span>Ток<span class="accent">Клип</span></span></a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="#participate">Участвовать</a><a href="#rules">Правила</a><a href="#rewards">Награды</a><a href="#faq">Вопросы</a>
+    </nav>
+    <a class="top-link" href="https://vk.ru/avatariagame_kt" target="_blank" rel="noopener">Группа проекта ↗</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> АКТИВНОСТЬ ФАН-ПРОЕКТА «АВАТАРСКИЙ KLIPTOK»</p>
+        <h1>ТВОЙ КОММЕНТАРИЙ<br><span class="gradient">РЕШАЕТ!</span></h1>
+        <p class="lead">Получай задание в течение трёх часов после выхода клипа, выполняй его и зарабатывай ТокКоины.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#participate">Получить задание <span>↘</span></a><a class="button button-ghost" href="#rules">Как участвовать</a></div>
+        <p class="hero-note">Сначала посмотри клип — потом получай задание!</p>
+      </div>
+      <div class="hero-visual" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-token"><span>ТК</span><small>TOK<br>CLIP</small></div><span class="spark spark-a">✦</span><span class="spark spark-b">✧</span></div>
+    </section>
+
+    <section class="section participate-section" id="participate">
+      <div class="section-heading"><div><p class="eyebrow">ТЕКУЩАЯ АКТИВНОСТЬ</p><h2>Участвуй в клипе</h2><p class="section-intro">Следи за публикациями в официальной группе игры «Аватария».</p></div><span id="clip-status" class="status-pill muted"><i></i> Проверяем статус…</span></div>
+      <article class="clip-card">
+        <div class="clip-art"><span>▶</span><small>AVATARIA CLIP</small></div>
+        <div class="clip-info"><p class="card-kicker">АКТИВНЫЙ КЛИП</p><h3 id="clip-title">Загружаем текущий клип</h3><p id="clip-description">Информация об активной активности появится здесь.</p><a id="clip-link" class="text-link hidden" href="#" target="_blank" rel="noopener">Открыть клип ВКонтакте ↗</a></div>
+      </article>
+      <div class="timer-card" id="timer-card"><div class="timer-copy"><span class="timer-icon">◷</span><div><strong>Время на участие</strong><p id="timer-caption">Приём задания и отправка ссылки доступны в течение 3 часов после публикации клипа.</p></div></div><div class="timer" id="clip-countdown" aria-live="polite"><span>— — : — — : — —</span><small>до окончания</small></div></div>
+
+      <div class="participate-card">
+        <div class="participate-title"><div><p class="eyebrow">ТВОЁ ЗАДАНИЕ</p><h3>Получи свою миссию</h3></div><span class="random-tag">✦ Случайный выбор</span></div>
+        <p class="muted-text">Обязательно посмотри клип перед получением задания. Введи числовой VK ID своего личного аккаунта.</p>
+        <form id="task-form">
+          <label for="vk-id">Твой VK ID</label>
+          <div class="input-row"><input id="vk-id" name="vkId" inputmode="numeric" autocomplete="off" placeholder="Например, 123456789" required><button class="button button-primary" type="submit" id="task-button">Получить задание <span>→</span></button></div>
+        </form>
+        <div class="form-hint">На один VK ID и один клип выдаётся только одно задание. Заменить его нельзя.</div>
+        <div id="task-result" class="result hidden" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="rewards">
+      <div class="section-heading"><div><p class="eyebrow">ТВОИ НАГРАДЫ</p><h2>Зарабатывай ТокКоины</h2><p class="section-intro">У каждого задания есть шанс принести тебе награду.</p></div></div>
+      <div class="reward-grid">
+        <article class="reward-card"><span class="reward-icon">✦</span><p class="card-kicker">ОБЫЧНОЕ ЗАДАНИЕ</p><h3><span>15</span> ТокКоинов</h3><p>После окончания приёма заданий рандомайзер выбирает 15 счастливчиков. Организаторы проверяют выполнение, и победителям начисляется награда.</p><div class="reward-foot">15 победителей на один клип</div></article>
+        <article class="reward-card secret"><span class="reward-icon">✧</span><p class="card-kicker">РЕДКОЕ ЗАДАНИЕ</p><h3><span>100</span> ТокКоинов</h3><p>У каждого задания свой шанс выпадения редкого варианта. Если он выпал тебе, об этом будет написано. За правильное выполнение награда гарантирована.</p><div class="reward-foot">Гарантированная награда после проверки</div></article>
+      </div>
+      <p class="reward-note">Результаты каждого клипа публикуются в течение 7 рабочих дней на <a href="https://kliptok.github.io/tokkoiny/" target="_blank" rel="noopener">сайте ТокКоинов</a>.</p>
+    </section>
+
+    <section class="section rules-section" id="rules">
+      <div class="section-heading"><div><p class="eyebrow">ПЕРЕД УЧАСТИЕМ</p><h2>Правила активности</h2><p class="section-intro">Несколько простых условий, которые важно знать заранее.</p></div></div>
+      <div class="rules-layout">
+        <div class="rules-list">
+          <article class="rule-item"><span class="rule-number">01</span><div><h3>Получение задания</h3><ul><li>Клипы выходят несколько раз в неделю. Следи за публикациями в <a href="https://vk.ru/avataryaclub" target="_blank" rel="noopener">официальной группе игры «Аватария»</a>.</li><li>Получить задание можно в течение трёх часов после публикации клипа.</li><li>На один VK ID и один клип выдаётся только одно случайное задание.</li><li>Заменить или изменить полученное задание нельзя.</li><li>Участвовать нужно со своего личного аккаунта.</li></ul></div></article>
+          <article class="rule-item"><span class="rule-number">02</span><div><h3>Выполнение и отправка</h3><ul><li>Выполни задание и отправь ссылку в течение тех же трёх часов после публикации клипа.</li><li>Комментарий должен соответствовать условиям полученного задания.</li><li>Принимаются полные ссылки формата <b>https://vk.com/</b> или <b>https://vk.ru/</b>.</li><li>Лучше сразу написать хороший комментарий и не редактировать его.</li><li>После отправки ссылки исправить её нельзя — внимательно проверь адрес перед отправкой.</li></ul></div></article>
+          <article class="rule-item"><span class="rule-number">03</span><div><h3>Выбор победителей</h3><ul><li>После окончания приёма заданий рандомайзер выбирает 15 участников.</li><li>Организаторы проверяют выполнение выбранных участников.</li><li>Если задание выполнено неправильно, участник переизбирается.</li><li>За один клип один участник может выиграть только один раз.</li><li>Результаты публикуются в течение 7 рабочих дней на сайте ТокКоинов.</li></ul></div></article>
+          <article class="rule-item"><span class="rule-number">04</span><div><h3>Редкие задания</h3><ul><li>У каждого задания свой шанс выпадения редкого варианта.</li><li>Если тебе выпало редкое задание, сайт сообщит об этом.</li><li>Редкое задание выполняется на обычных условиях.</li><li>За успешное выполнение после проверки начисляется 100 ТокКоинов.</li><li>Если редкое задание не выполнено, награда не начисляется.</li></ul></div></article>
+        </div>
+        <aside class="warning-panel"><div class="warning-symbol">!</div><h3>Обрати внимание</h3><p>Перед получением задания обязательно посмотри клип.</p><ul><li>⏱ На всё — только 3 часа.</li><li>🎲 Задание нельзя заменить.</li><li>🔗 Отправленную ссылку нельзя исправить.</li><li>👤 Используй свой личный аккаунт.</li></ul><a class="button button-ghost button-wide" href="#participate">Перейти к заданию ↗</a></aside>
+      </div>
+      <div class="help-panel"><div><strong>Не загрузилось задание?</strong><p>Обнови страницу сочетанием клавиш <b>Ctrl + Shift + R</b>, затем попробуй получить задание повторно. Задания распределяются случайным образом, их хватит всем участникам.</p></div><span class="help-icon">↻</span></div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="section-heading"><div><p class="eyebrow">ЕСТЬ ВОПРОСЫ?</p><h2>Часто спрашивают</h2><p class="section-intro">Короткие ответы на самые важные вопросы.</p></div></div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>Как часто выходят клипы?</summary><p>Клипы выходят несколько раз в неделю. Следи за публикациями в <a href="https://vk.ru/avataryaclub" target="_blank" rel="noopener">официальной группе игры «Аватария»</a>.</p></details>
+        <details class="faq-item"><summary>Сколько времени есть на участие?</summary><p>Получить задание, выполнить его и отправить ссылку нужно в течение трёх часов после публикации клипа.</p></details>
+        <details class="faq-item"><summary>Можно ли получить другое задание?</summary><p>Нет. На один VK ID и один клип выдаётся только одно задание. Изменить или заменить его нельзя.</p></details>
+        <details class="faq-item"><summary>Что делать, если задание не загрузилось?</summary><p>Обнови страницу сочетанием Ctrl + Shift + R и попробуй получить задание повторно. Задания распределяются случайным образом, поэтому их хватит всем участникам.</p></details>
+        <details class="faq-item"><summary>Можно ли исправить отправленную ссылку?</summary><p>Нет. Отправленную ссылку исправить нельзя, поэтому внимательно проверь её перед отправкой.</p></details>
+        <details class="faq-item"><summary>Какой аккаунт использовать?</summary><p>Выполняй задание со своего личного аккаунта ВКонтакте.</p></details>
+        <details class="faq-item"><summary>Что будет, если комментарий не подходит под задание?</summary><p>Такое выполнение не засчитывается. Если выбранный участник не справился с заданием, организаторы переизбирают участника.</p></details>
+        <details class="faq-item"><summary>Можно ли редактировать комментарий?</summary><p>Лучше сразу написать хороший комментарий и не редактировать его. Организаторы не отслеживают историю изменений комментария.</p></details>
+        <details class="faq-item"><summary>Когда объявляют победителей?</summary><p>Результаты каждого клипа публикуются в течение 7 рабочих дней после окончания приёма заданий.</p></details>
+        <details class="faq-item"><summary>Где посмотреть результаты?</summary><p>Список победителей публикуется на <a href="https://kliptok.github.io/tokkoiny/" target="_blank" rel="noopener">сайте ТокКоинов</a>.</p></details>
+        <details class="faq-item"><summary>Когда начисляются ТокКоины?</summary><p>Награды начисляются автоматически после проверки выполнения.</p></details>
+        <details class="faq-item"><summary>Может ли один участник выиграть несколько раз?</summary><p>За один клип один участник может выиграть только один раз. В следующих клипах можно участвовать снова.</p></details>
+        <details class="faq-item"><summary>Что такое редкое задание?</summary><p>Это обычное по условиям выполнения задание с редким шансом выпадения. Если оно выпало тебе, сайт сообщит об этом. За успешное выполнение после проверки начисляется 100 ТокКоинов.</p></details>
+      </div>
+    </section>
+
+    <section class="community-section">
+      <p class="eyebrow">ОСТАВАЙСЯ НА СВЯЗИ</p><h2>Следи за новостями проекта</h2><p>Клипы, объявления, результаты и информация об активности — в наших сообществах.</p>
+      <div class="community-links"><a class="community-link" href="https://vk.ru/avatariagame_kt" target="_blank" rel="noopener"><span class="community-icon">VK</span><span><b>Аватарский Kliptok</b><small>Группа фан-проекта</small></span><span class="arrow">↗</span></a><a class="community-link" href="https://vk.ru/avataryaclub" target="_blank" rel="noopener"><span class="community-icon">VK</span><span><b>Аватария</b><small>Официальная группа игры</small></span><span class="arrow">↗</span></a><a class="community-link" href="https://kliptok.github.io/tokkoiny/" target="_blank" rel="noopener"><span class="community-icon coin-icon">✦</span><span><b>Сайт ТокКоинов</b><small>Архив и информация о наградах</small></span><span class="arrow">↗</span></a></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">ТК</span><span>Ток<span class="accent">Клип</span></span></a><span>Активность фан-проекта «Аватарский Kliptok»</span><a href="#home">Наверх ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
