@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b20">
+  <meta name="description" content="ТокКлип — активности сообщества Аватарский KlipTok. Получай задания, участвуй и зарабатывай ТокКоины.">
+  <title>ТокКлип — твой комментарий решает</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-glow page-glow-one" aria-hidden="true"></div>
+  <div class="page-glow page-glow-two" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="ТокКлип — на главную">
+      <span class="brand-mark"><span>ТК</span></span>
+      <span class="brand-name">Ток<span>Клип</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="#participate">Участвовать</a>
+      <a href="#rewards">Награды</a>
+      <a href="#how-it-works">Как это работает</a>
+    </nav>
+    <a class="header-cta" href="#participate">К заданиям <span>↗</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-kicker"><span class="kicker-dot"></span> АКТИВНОСТЬ АВАТАРСКОГО KLIPTOK</div>
+        <h1>ТВОЙ КОММЕНТАРИЙ<br><span class="gradient-text">РЕШАЕТ!</span></h1>
+        <p class="hero-description">Лови задания, проявляй активность под клипами и получай ТокКоины за участие.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#participate">Получить задание <span>↘</span></a>
+          <a class="button button-ghost" href="#how-it-works">Как всё устроено</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✦</span> Участвуй в активности сообщества и следи за новыми клипами</div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="hero-spark spark-a">✦</div><div class="hero-spark spark-b">✧</div>
+        <div class="hero-token"><span class="token-top">TOK</span><strong>К</strong><span class="token-bottom">CLIP</span></div>
+        <div class="floating-label label-one"><span>✦</span> ТВОЯ АКТИВНОСТЬ</div>
+        <div class="floating-label label-two"><span>↗</span> ТВОИ НАГРАДЫ</div>
+      </div>
+    </section>
+
+    <section class="quick-stats" aria-label="О проекте">
+      <div class="stat-item"><span class="stat-icon">✧</span><div><strong>Задания</strong><small>для участников</small></div></div>
+      <div class="stat-item"><span class="stat-icon">◈</span><div><strong>ТокКоины</strong><small>за активность</small></div></div>
+      <div class="stat-item"><span class="stat-icon">♡</span><div><strong>Сообщество</strong><small>Аватарский KlipTok</small></div></div>
+    </section>
+
+    <section class="section participate-section" id="participate">
+      <div class="section-heading">
+        <div><p class="eyebrow">ТВОЙ ШАНС НАГРАДУ</p><h2>Участвуй в клипе</h2><p class="section-subtitle">Сначала посмотри активный клип, затем получи персональное задание.</p></div>
+        <span id="clip-status" class="status-pill muted"><i></i> Проверяем статус…</span>
+      </div>
+
+      <article class="clip-card">
+        <div class="clip-art"><span class="clip-play">▶</span><strong>VK</strong><small>КЛИП</small></div>
+        <div class="clip-info">
+          <div class="clip-label">ТЕКУЩАЯ АКТИВНОСТЬ</div>
+          <h3 id="clip-title">Загружаем текущий клип</h3>
+          <p id="clip-description">Информация об активной активности появится здесь.</p>
+          <a id="clip-link" class="text-link hidden" href="#" target="_blank" rel="noopener">Открыть клип ВКонтакте <span>↗</span></a>
+        </div>
+        <div class="clip-decoration" aria-hidden="true">✦</div>
+      </article>
+
+      <div class="participate-card">
+        <div class="participate-heading"><div class="participate-icon">✧</div><div><h3>Получи своё задание</h3><p>Введи числовой VK ID, чтобы получить задание для текущего клипа.</p></div></div>
+        <form id="task-form">
+          <label for="vk-id">ТВОЙ VK ID</label>
+          <div class="input-row">
+            <input id="vk-id" name="vkId" inputmode="numeric" autocomplete="off" placeholder="Например, 123456789" required>
+            <button class="button button-primary" type="submit" id="task-button">Получить задание <span>↗</span></button>
+          </div>
+          <p class="form-hint"><span>ⓘ</span> Указывай именно числовой ID своей страницы ВКонтакте.</p>
+        </form>
+        <div id="task-result" class="result hidden" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section rewards-section" id="rewards">
+      <div class="section-heading"><div><p class="eyebrow">ПРИЯТНЫЙ БОНУС</p><h2>Твоя активность ценится</h2><p class="section-subtitle">За участие можно получить ТокКоины — следи за условиями каждой активности.</p></div></div>
+      <div class="reward-grid">
+        <article class="reward-card"><div class="reward-card-top"><span class="reward-icon">✦</span><span class="reward-tag">ОБЫЧНОЕ ЗАДАНИЕ</span></div><h3><strong>15</strong> ТокКоинов</h3><p>За победу в обычном розыгрыше клипа. До 15 победителей.</p><div class="reward-line"></div><span class="reward-foot">Участвуй и не пропускай итоги</span></article>
+        <article class="reward-card secret"><div class="reward-card-top"><span class="reward-icon">✧</span><span class="reward-tag">ОСОБОЕ ЗАДАНИЕ</span></div><h3><strong>100</strong> ТокКоинов</h3><p>За выполнение редкого секретного задания. Вне обычного розыгрыша.</p><div class="reward-line"></div><span class="reward-foot">Секрет может ждать именно тебя</span></article>
+      </div>
+    </section>
+
+    <section class="section how-section" id="how-it-works">
+      <div class="section-heading"><div><p class="eyebrow">ТРИ ПРОСТЫХ ШАГА</p><h2>Как это работает</h2><p class="section-subtitle">Выполни задание и отправь подтверждение организаторам.</p></div></div>
+      <div class="step-grid">
+        <article class="step-card"><div class="step-number">01</div><div class="step-icon">⌕</div><h3>Получи задание</h3><p>Введи свой VK ID и получи случайное задание для активного клипа.</p></article>
+        <article class="step-card"><div class="step-number">02</div><div class="step-icon">♡</div><h3>Выполни его</h3><p>Внимательно прочитай условие и выполни задание под клипом ВКонтакте.</p></article>
+        <article class="step-card"><div class="step-number">03</div><div class="step-icon">↗</div><h3>Отправь ссылку</h3><p>Пришли ссылку на комментарий или подтверждение, чтобы организатор мог проверить выполнение.</p></article>
+      </div>
+    </section>
+
+    <section class="bottom-banner">
+      <div><p class="eyebrow">ГОТОВ(А) ПОПРОБОВАТЬ?</p><h2>Твой следующий комментарий<br>может принести награду.</h2></div>
+      <a class="button button-primary" href="#participate">Начать участие <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark"><span>ТК</span></span><span class="brand-name">Ток<span>Клип</span></span></a><div class="footer-copy"><strong>Активность сообщества Аватарский KlipTok</strong><span>Неофициальный проект. Не связан с администрацией ВКонтакте или игры «Аватария».</span></div><a class="back-top" href="#home" aria-label="Наверх">↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
