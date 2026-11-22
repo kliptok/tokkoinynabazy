@@ -1,6 +1,6 @@
 // Укажите URL развёрнутого Google Apps Script Web App.
 // Вставьте свой адрес /exec между кавычками перед публикацией обновления.
-const API_URL = "https://script.google.com/macros/library/d/1PMv08A_VM1WvPR9JGoERr-0sRC4SnyYi8JbokbsoZnWx1uy8KtNX5lhW/2";
+const API_URL = "https://script.google.com/macros/s/AKfycby-tzlhFCnURjNphry0VgKiGYw2Ys_fAZhD8w57L2byUFVscXBnK3w_bMN7ylADNRm1ig/exec";
 
 const $ = (id) => document.getElementById(id);
 const form = $("task-form");
